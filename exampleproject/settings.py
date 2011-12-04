@@ -18,12 +18,12 @@ DATABASES = {
 #        'NAME': 'exampleapp',    # Or path to database file if using sqlite3.
 #    },
     'default': {
-        'ENGINE': 'sqlite3', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
+        'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
         'NAME': 'example-sqlite3.db',    # Or path to database file if using sqlite3.
-    },             
+    },
     'mongodb': {
-        'ENGINE': 'django_mongokit.mongodb', 
-        'NAME': 'example', 
+        'ENGINE': 'django_mongokit.mongodb',
+        'NAME': 'example',
         'USER': '',                      # Not used with sqlite3.
         'PASSWORD': '',                  # Not used with sqlite3.
         'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
@@ -67,21 +67,6 @@ ADMIN_MEDIA_PREFIX = '/media/'
 # Make this unique, and don't share it with anybody.
 SECRET_KEY = '7o!nbm=a=j-%6m3vhd&m*8%&u-rdr)b(t%ksei)d+w$$(xb=2+'
 
-# List of callables that know how to import templates from various sources.
-TEMPLATE_LOADERS = (
-    'django.template.loaders.filesystem.Loader',
-    'django.template.loaders.app_directories.Loader',
-#     'django.template.loaders.eggs.Loader',
-)
-
-MIDDLEWARE_CLASSES = (
-    'django.middleware.common.CommonMiddleware',
-    'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
-    'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.messages.middleware.MessageMiddleware',
-)
-
 ROOT_URLCONF = 'exampleproject.urls'
 
 TEMPLATE_DIRS = (
@@ -99,4 +84,3 @@ INSTALLED_APPS = (
     # Uncomment the next line to enable the admin:
     # 'django.contrib.admin',
 )
-
